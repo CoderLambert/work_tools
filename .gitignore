@@ -3,3 +3,5 @@ node_modules
 dist
 dist-ssr
 *.local
+src/render/components.d.ts
+src/render/main.ts

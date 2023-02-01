@@ -8,11 +8,7 @@ const config = {
   },
   publish: null,
   npmRebuild: false,
-  files: [
-    'dist/main/**/*',
-    'dist/preload/**/*',
-    'dist/render/**/*',
-  ],
+  files: ['dist/main/**/*', 'dist/preload/**/*', 'dist/render/**/*'],
 }
 
 module.exports = config

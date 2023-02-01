@@ -12,27 +12,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "baseUrl": ".",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
-    "types": [
-      "vite/client",
-      "./src/preload"
-    ],
+    "lib": ["esnext", "dom"],
+    "types": ["vite/client", "./src/preload"],
     "paths": {
-      "@render/*": [
-        "src/render/*"
-      ],
-      "@main/*": [
-        "src/main/*"
-      ]
+      "@render/*": ["src/render/*"],
+      "@main/*": ["src/main/*"]
     }
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
