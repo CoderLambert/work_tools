@@ -2,6 +2,7 @@ import { NestFactory } from '@nestjs/core'
 import { app } from 'electron'
 import type { MicroserviceOptions } from '@nestjs/microservices'
 import { ElectronIpcTransport } from '@doubleshot/nest-electron'
+import installExtension, { VUEJS3_DEVTOOLS } from 'electron-devtools-installer'
 import { AppModule } from './app.module'
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true'
@@ -28,6 +29,7 @@ async function electronAppInit() {
   }
 
   await app.whenReady()
+  await installExtension(VUEJS3_DEVTOOLS)
 }
 
 async function bootstrap() {

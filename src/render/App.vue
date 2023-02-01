@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <h1>引入and</h1>
+  <RouterView />
 </template>
 
 <style lang="less">
