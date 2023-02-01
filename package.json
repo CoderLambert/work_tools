@@ -1,0 +1,47 @@
+{
+  "name": "fast-vite-nestjs-electron",
+  "version": "0.0.1",
+  "packageManager": "pnpm@7.26.2",
+  "description": "Vite + Electron with Doubleshot, so fast! ⚡",
+  "main": "dist/main/index.js",
+  "scripts": {
+    "dev": "rimraf dist && vite",
+    "build": "rimraf dist && vite build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@doubleshot/nest-electron": "^0.0.5",
+    "@nestjs/common": "^9.2.1",
+    "@nestjs/core": "^9.2.1",
+    "@nestjs/microservices": "^9.2.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7.8.0",
+    "vue": "^3.2.45"
+  },
+  "devDependencies": {
+    "@lightwing/eslint-config": "0.0.10",
+    "@vitejs/plugin-vue": "4.0.0",
+    "@vue/compiler-sfc": "3.2.45",
+    "electron": "22.1.0",
+    "electron-builder": "23.6.0",
+    "eslint": "8.33.0",
+    "lint-staged": "13.1.0",
+    "pnpm": "7.26.2",
+    "rimraf": "4.1.2",
+    "simple-git-hooks": "2.8.1",
+    "typescript": "4.9.5",
+    "vite": "4.0.4",
+    "vite-plugin-doubleshot": "0.0.9",
+    "vue-tsc": "1.0.24"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md,json,yml}": [
+      "eslint --fix"
+    ]
+  }
+}
